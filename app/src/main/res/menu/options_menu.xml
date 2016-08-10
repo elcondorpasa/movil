@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cl.idiem.uchile.dhc.MapsActivity" >
+    <item
+        android:id="@+id/MenuOpcion1"
+        android:title="Normal"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/MenuOpcion2"
+        android:title="Satélite"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/MenuOpcion3"
+        android:title="Terreno"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/MenuOpcion4"
+        android:title="Híbrido"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

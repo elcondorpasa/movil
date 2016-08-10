@@ -1,0 +1,244 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="65dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="cl.idiem.uchile.dhc.FormularioActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@drawable/shadow_background_layout">
+
+        <!-- Título -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/linearLayout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/section_label"
+                android:layout_weight="0.60"
+                android:layout_margin="20sp"
+                android:text="OPCIONES DE GUARDADO"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/separator"
+                android:visibility="visible"
+                android:background="@color/colorPrimary50"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_marginBottom="8sp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <!-- Foto | FOTO -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="1"
+                    android:clickable="false">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/camera"
+                        android:padding="20dp"
+                        android:layout_marginEnd="15sp"
+                        android:id="@+id/takePicture"
+                        android:background="@drawable/circle_background"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorAccent"
+                        android:text="CAPTURAR IMAGEN"
+                        android:clickable="true" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- ENVIAR A SERVIDOR | sendServer -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="1"
+                    android:clickable="false"
+                    android:id="@+id/layoutSendServer">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/lapiz2"
+                        android:padding="20dp"
+                        android:layout_marginEnd="15sp"
+                        android:id="@+id/firmar"
+                        android:background="@drawable/circle_background"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp"
+                        android:text="FIRMA ENCARGADO OBRA"
+                        android:clickable="true" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- GUARDAR ARCHIVO | saveFile -->
+             <!--   <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="1"
+                    android:clickable="false">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/file"
+                        android:padding="20dp"
+                        android:layout_marginEnd="15sp"
+                        android:id="@+id/saveFile"
+                        android:background="@drawable/circle_background"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:text="GUARDAR ARCHIVO"
+                        android:clickable="true" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/> -->
+                <!-- FIRMAR | Firmar -->
+              <LinearLayout
+                       android:orientation="horizontal"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="10sp"
+                       android:layout_gravity="center_vertical"
+                       android:weightSum="1"
+                       android:clickable="false">
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:gravity="center"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/printer"
+                      android:padding="20dp"
+                      android:layout_marginEnd="15sp"
+                      android:id="@+id/print"
+                      android:background="@drawable/circle_background"
+                      android:clickable="true"/>
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:textColor="@color/colorAccent"
+                      android:textSize="13sp"
+                      android:text="IMPRIMIR VOUCHER"
+                      android:clickable="true" />
+
+              </LinearLayout>
+                   <View
+                       android:layout_width="fill_parent"
+                       android:layout_height="1dp"
+                       android:visibility="visible"
+                       android:background="@color/colorAccent50"/>
+                   <!-- IMPRIMIR VOUCHER | print -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="1"
+                    android:clickable="false">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cloud"
+                        android:padding="20dp"
+                        android:layout_marginEnd="15sp"
+                        android:id="@+id/sendServer"
+                        android:background="@drawable/circle_background"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp"
+                        android:text="ENVIAR A SERVIDOR"
+                        android:id="@+id/textSendServer"
+                        android:clickable="true" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:text="CONTROL DE CONO"
+                        android:id="@+id/textControlCono"
+                        android:clickable="true"
+                        android:visibility="gone"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

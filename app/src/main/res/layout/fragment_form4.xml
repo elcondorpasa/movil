@@ -1,0 +1,597 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="65dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="cl.idiem.uchile.dhc.FormularioActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@drawable/shadow_background_layout">
+
+        <!-- Título -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/linearLayout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/section_label"
+                android:layout_weight="0.60"
+                android:layout_margin="20sp"
+                android:text="ANTECEDENTES DEL MUESTREO"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/separator"
+                android:visibility="visible"
+                android:background="@color/colorPrimary50"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_marginBottom="8sp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <!-- Fecha Muestreo | dateMuestreo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha Muestreo"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dateMuestreo"
+                        android:hint="Ingrese fecha"
+                        android:textSize="13sp"
+                        android:focusable="false"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Hora Muestreo | timeMuestreo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora Muestreo"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:inputType="time"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeMuestreo"
+                        android:hint="Ingrese hora"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16"
+                        android:focusable="false"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Hora llegada camión -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora Llegada Camión"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:inputType="time"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeCamion"
+                        android:focusable="false"
+                        android:textSize="13sp"
+                        android:hint="Ingrese hora"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Temp. Ambiente °C | tempAmb -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temp. Ambiente"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempAmb"
+                        android:textSize="13sp"
+                        android:inputType="numberDecimal|numberSigned|phone"
+                        android:hint="Ingrese temperatura"
+                        android:layout_weight="0.16"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" C°"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Temp. Mezcla C° | tempMezcla -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temp. Mezcla"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempMezcla"
+                        android:inputType="numberDecimal|numberSigned|phone"
+                        android:hint="Ingrese temperatura"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" C°"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Asentamiento | asentamiento -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Asentamiento"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/asentamiento">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apto para ensayos"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Switch
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/aptoCono"
+                        android:checked="true"
+                        android:textSize="13sp"
+                        android:showText="false"
+                        android:padding="10sp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="1"
+                    android:clickable="false"
+                    android:visibility="visible"
+                    android:id="@+id/boxCono">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                <!-- Valor Cono | valCono -->
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Valor Cono"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/valCono"
+                        android:inputType="number|phone"
+                        android:textSize="13sp"
+                        android:hint="Ingrese valor"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Medida Cono 1 | medCono1 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medida Cono 1"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/medCono1"
+                        android:textSize="13sp"
+                        android:inputType="number|phone"
+                        android:hint="Ingrese medida"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Medida Cono 2 | medCono2 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutMedCono2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medida Cono 2"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/medCono2"
+                        android:inputType="number|phone"
+                        android:textSize="13sp"
+                        android:hint="Ingrese medida"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:visibility="visible"
+                            android:background="@color/colorAccent50"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Compactación Muestra | compactacion -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Compactación Muestra"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/compactacion">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Condición Climática | condClima -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Condición Climática"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/condClima">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Muesrea se extrae a | extraeA -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Muestra se extrae a"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/extraeA"
+                        android:inputType="numberDecimal|phone"
+                        android:hint="Ingrese número"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Mixero | mixero -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mixero"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mixero"
+                        android:inputType="text"
+                        android:textSize="13sp"
+                        android:hint="Ingrese mixero"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Hora Inicio Descarga | horaDescarga -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora Inicio Descarga"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/horaDescarga"
+                        android:inputType="time"
+                        android:focusable="false"
+                        android:textSize="13sp"
+                        android:hint="Ingrese hora"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

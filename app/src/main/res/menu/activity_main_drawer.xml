@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_samples_list"
+            android:icon="@drawable/ic_menu_samples_list"
+            android:title="Listado Muestras"
+            />
+        <item
+            android:id="@+id/nav_empty_form"
+            android:icon="@drawable/ic_menu_empty_form"
+            android:title="Nuevo Formulario Vacío" />
+        <item
+            android:id="@+id/nav_print"
+            android:icon="@drawable/ic_menu_print"
+            android:title="Impresora" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_menu_location"
+            android:title="Ubicación" />
+    </group>
+
+    <item android:title="Herramientas">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/connect"
+                android:title="Desconectar" />
+        </menu>
+    </item>
+
+</menu>

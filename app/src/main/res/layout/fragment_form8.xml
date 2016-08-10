@@ -1,0 +1,316 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="65dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="cl.idiem.uchile.dhc.FormularioActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@drawable/shadow_background_layout">
+
+        <!-- Título -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/linearLayout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/section_label"
+                android:layout_weight="0.60"
+                android:layout_margin="20sp"
+                android:text="OBSERVACIONES"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold"  />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/separator"
+                android:visibility="visible"
+                android:background="@color/colorPrimary50"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_marginBottom="8sp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <!-- Comentarios | comentarios -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comentarios"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/comentarios"
+                        android:textSize="13sp"
+                        android:inputType="textMultiLine"
+                        android:hint="Ingrese comentarios"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Obs. Muestreador | obsMuestreador -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Obs. Muestreador"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/obsMuestreador"
+                        android:inputType="textMultiLine"
+                        android:textSize="13sp"
+                        android:hint="Ingrese observaciones muestreador"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Obs. Encargado | obsEncargado -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Obs. Encargado"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/obsEncargado"
+                        android:inputType="textMultiLine"
+                        android:textSize="13sp"
+                        android:hint="Ingrese observaciones encargado"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Encargado | nomEncargado -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nom. Enc. en Obra"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nomEncargado"
+                        android:inputType="textMultiLine"
+                        android:textSize="13sp"
+                        android:hint="Ingrese nombre encargado"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Hora Salida | horaOut -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora de Salida"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/horaOut"
+                        android:textSize="13sp"
+                        android:focusable="false"
+                        android:hint="Ingrese hora"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Anular Boleta | anulaBoleta -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anular Boleta"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Switch
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/anulaBoleta"
+                        android:textSize="13sp"
+                        android:checked="false"
+                        android:showText="false"
+                        android:padding="10sp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- anular | anular boleta -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="1"
+                    android:clickable="false"
+                    android:visibility="gone"
+                    android:id="@+id/boxAnularBoleta">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <!-- Campo de Texto | CampoTexto -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:weightSum="1"
+                            android:clickable="false">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Motivo Anulación"
+                                android:textColor="#444444"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="10sp"/>
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/motivoAnular"
+                                android:textSize="13sp"
+                                android:inputType="textMultiLine"
+                                android:hint="Ingrese motivo"
+                                android:layout_marginEnd="10sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

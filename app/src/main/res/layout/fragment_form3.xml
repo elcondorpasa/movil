@@ -1,0 +1,337 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="65dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="cl.idiem.uchile.dhc.FormularioActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@drawable/shadow_background_layout">
+
+    <!-- Título -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/linearLayout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/section_label"
+                android:layout_weight="0.60"
+                android:layout_margin="20sp"
+                android:text="COLOCADO EN"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/separator"
+                android:visibility="visible"
+                android:background="@color/colorPrimary50"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_marginBottom="8sp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <!-- Tipo Edificio | tipoEdif -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo Edificio"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/tipoEdif">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Otro Edif | otroEdif -->
+              <!--  <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroEdif"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro Tipo Edificio"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroEdif"
+                        android:inputType="text"
+                        android:hint="Ingrese otro"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>-->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Elemento | elemento -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:id="@+id/layoutElemento"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Elemento"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/elemento">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Otro Elemento | otroElemento -->
+              <!--  <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroElem"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro Tipo Elemento"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroElem"
+                        android:inputType="text"
+                        android:hint="Ingrese otro"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>-->
+
+                <!-- Ubicación | ubicacion -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:id="@+id/layoutUbicacion"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ubicación"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/ubicacion">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Otro Ubi | otroUbi -->
+             <!--   <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroUbi"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro Ubicacion"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroUbicacion"
+                        android:inputType="text"
+                        android:textSize="13sp"
+                        android:hint="Ingrese otro"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>-->
+
+                <!-- Eje | eje -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:id="@+id/layoutEje"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eje"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eje"
+                        android:textSize="13sp"
+                        android:inputType="text"
+                        android:hint="Ingrese eje"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroEdif"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otra Colocación"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroEdif"
+                        android:inputType="text"
+                        android:hint="Ingrese otro"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

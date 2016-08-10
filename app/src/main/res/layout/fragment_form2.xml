@@ -1,0 +1,751 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="65dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="cl.idiem.uchile.dhc.FormularioActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@drawable/shadow_background_layout">
+
+        <!-- Título -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/linearLayout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/section_label"
+                android:layout_weight="0.60"
+                android:layout_margin="20sp"
+                android:text="ANTECEDENTES HORMIGÓN MUESTREO"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:id="@+id/separator"
+                android:visibility="visible"
+                android:background="@color/colorPrimary50"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_marginBottom="8sp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <!-- Confeccionado | confeccionado -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confeccionado"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/confeccionado">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Patente Camión | numCamion -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Número Camión"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numCamion"
+                        android:inputType="number|phone"
+                        android:textSize="13sp"
+                        android:hint="Ingrese número"
+                        android:layout_weight="0.16"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- N° Guía | numGuia -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N° Guía"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numGuia"
+                        android:textSize="13sp"
+                        android:inputType="number|phone"
+                        android:hint="Ingrese número"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Cantidad m3 | cantiM3 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cantiM3"
+                        android:textSize="13sp"
+                        android:inputType="numberDecimal|phone"
+                        android:hint="Ingrese cantidad"
+                        android:layout_weight="0.16" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" m3"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Planta | planta -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Planta"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/planta">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Código Producto | codProducto -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Código Producto"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/codProducto"
+                        android:hint="Ingrese código"
+                        android:textSize="13sp"
+                        android:inputType="text"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Grado/Tipo | gradoTipo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grado/Tipo"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gradoTipo"
+                        android:inputType="text"
+                        android:textSize="13sp"
+                        android:hint="Ingrese valor"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Salida Planta | plantaOut -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salida Planta"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/plantaOut"
+                        android:focusable="false"
+                        android:textSize="13sp"
+                        android:hint="Seleccione hora"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Aditivo Col | aditivo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aditivo Col"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/aditivo">
+                    </Spinner>
+                    <TextView
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:id="@+id/addAditivo"
+                        android:layout_width="wrap_content"
+                        android:textSize="13sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Otro Aditivo Col | otroAditivo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroAditivo"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro Aditivo Col"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroAditivo"
+                        android:inputType="text"
+                        android:hint="Ingrese otro Aditivo"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Aditivo 2 Col | aditivo2 -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutAditivo2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Segundo Aditivo Col"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/aditivo2">
+
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Otro Aditivo Col | otroAditivo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroAditivo2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro Aditivo Col"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroAditivo2"
+                        android:inputType="text"
+                        android:textSize="13sp"
+                        android:hint="Ingrese otro Aditivo"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Cantidad | cantidadAditivo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cantidadAditivo"
+                        android:inputType="number|phone"
+                        android:hint="Ingrese cantidad"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Medida | medidaAditivo -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medida"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/medidaAditivo">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Adicion | adicion -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adicion"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/adicion">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Adición Agua | cantidadAgua -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutAdicionAgua"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad Agua"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cantidadAgua"
+                        android:inputType="numberDecimal|phone"
+                        android:hint="Ingrese cantidad"
+                        android:textSize="13sp"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Medida Agua | medidaAgua -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutMedidaAgua"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medida Agua Adición"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/medidaAgua">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Otro Adición | otroAdicion -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroAdicion"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro Aditivo Col"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroAdicion"
+                        android:inputType="text"
+                        android:textSize="13sp"
+                        android:hint="Ingrese otra adición"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Compactación en Obra | compactObra -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Compactación en Obra"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="13sp"
+                        android:id="@+id/compactObra">
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/colorAccent50"/>
+
+                <!-- Otro Compactación en Obra | otroCompactObra -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/layoutOtroCompactObra"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otra Compactación en Obra"
+                        android:textColor="#444444"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10sp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otroCompactObra"
+                        android:inputType="text"
+                        android:textSize="13sp"
+                        android:hint="Ingrese otra Compactación en Obra"
+                        android:layout_weight="0.16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

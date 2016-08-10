@@ -1,0 +1,6 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_menu_samples_list" type="drawable">@android:drawable/ic_menu_today</item>
+    <item name="ic_menu_empty_form" type="drawable">@android:drawable/ic_menu_edit</item>
+    <item name="ic_menu_location" type="drawable">@android:drawable/ic_menu_mylocation</item>
+    <item name="ic_menu_print" type="drawable">@android:drawable/ic_menu_manage</item>
+</resources>
